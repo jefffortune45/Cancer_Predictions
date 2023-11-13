@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<body>
+    <header class="mb-0">
+        <img class="bg-img" src="static/Cancers/breast-cancer-6701684_1280.jpg" alt="images">
+
+        <div class="text-white glass container-1  pb-5">
+            <h1 class="display-1 text-center">Keeping Cancer at bay</h1>
+        
+            <div class="container row text-white">
+                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
+                    <h1>
+                        Understanding
+                    </h1>
+                </div>
+                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
+                    <h1>
+                        Prevention
+                    </h1>
+                </div>
+                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
+                    <h1>
+                        Take action
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-4 d-inline-flex justify-content-center">
+                    <div class="card m-2 cb1">
+                        <div class="card-body">
+                            <span class="card-number text-white">Breast Cancer</span>
+                            <img src="static/Cancers/breast_2.jpg" class="card-img-top w-100" alt="breast cancer">
+                            <p class="card-text">
+                                Breast cancer is a malignant disease that develops in the cells of the breast. It 
+                                can take various forms, including ductal and lobular carcinomas. It is one of the 
+                                most common diseases in women, although men can also be affected. Early detection 
+                                is essential, and can be achieved by methods such as breast self-examination and 
+                                regular mammograms. Common symptoms of breast cancer include nodules in the breasts, 
+                                changes in breast shape or size, pain and discharge from the nipples. Treatment varies 
+                                according to the stage of the cancer, but may include surgery, chemotherapy, radiotherapy 
+                                and other modalities. Breast cancer prevention involves raising awareness, reducing risk 
+                                factors such as excessive alcohol consumption and obesity, and promoting healthy lifestyles. 
+                                Ongoing research is essential to improve treatment and quality of life for those affected by this disease.
+                            </p>
+                            <a href="{{ url_for('breast_cancer')}}" class="btn btn-primary">See More...</a>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-2 cb1">
+                        <div class="card-body">
+                            <span class="card-number text-white">Skin Cancer</span>
+                            <img src="static/Cancers/skin_cancer.jpg" class="card-img-top w-100 h-50" alt="breast cancer">
+                            <p class="card-text">
+                                Skin cancer, also known as cutaneous cancer, is a form of cancer that develops in 
+                                the cells of the skin. It can take different forms, including basal cell carcinoma, 
+                                squamous cell carcinoma and melanoma. Skin cancer is usually caused by excessive 
+                                exposure to the sun's ultraviolet (UV) rays or to artificial tanning beds. Early 
+                                detection is crucial to effective treatment, and regular monitoring for changes 
+                                in moles, spots or skin lesions is essential. Sun protection and safety practices, 
+                                such as using sunscreen and avoiding excessive sun exposure, play an essential 
+                                role in preventing skin cancer.
+                            </p>
+                            <a href="{{ url_for('skin_cancer')}}" class="btn btn-primary">See More...</a>
+                        </div>
+                      </div>
+                </div>
+
+
+
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-2 cb1">
+                        <div class="card-body">
+                            <span class="card-number text-white">Heart Attack</span>
+                            <img src="static/Cancers/heart_cancer.jpg" class="card-img-top w-100" alt="breast cancer">
+                            <p class="card-text">
+                                Myocardial infarction, commonly known as heart attack, is a serious condition that occurs 
+                                when blood flow to the heart muscle is blocked or severely reduced, often due to the build-up 
+                                of atheromatous plaque in the coronary arteries. This can lead to life-threatening damage to 
+                                the heart muscle. The most common symptoms are intense chest pain, shortness of breath, excessive 
+                                sweating and pain in the arms, neck or jaw. Immediate medical intervention is crucial to minimize 
+                                damage to the heart muscle and improve chances of survival. Preventing myocardial infarction 
+                                generally involves managing risk factors such as high blood pressure, diabetes, smoking, 
+                                obesity and stress, as well as adopting a healthy lifestyle, including a balanced diet and 
+                                regular physical activity.
+                            </p>
+                            <a href="{{ url_for('heart_attact')}}" class="btn btn-primary">See More...</a>
+                        </div>
+                      </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+{% endblock %}
+
+

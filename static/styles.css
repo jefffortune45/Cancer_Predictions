@@ -1,0 +1,138 @@
+.bg-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-img-1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    /* z-index: 2; */
+}
+
+
+.bg-image {
+    background-size: cover; /* Ajuste l'image pour qu'elle couvre toute la zone */
+    background-position: center; /* Centre l'image horizontalement et verticalement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image en arrière-plan pour un effet de défilement parallaxe (optionnel) */
+    /* Autres styles personnalisés */
+    color: #fff; /* Couleur du texte sur l'arrière-plan */
+    /* Ajoutez d'autres styles CSS selon vos préférences */
+  }
+
+.navbar-nav li.nav-item a.nav-link {
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Bordure initiale transparente */
+    border-radius: 26px;
+    background-color: transparent; /* Arrière-plan transparent */
+    padding: 5px 10px; /* Espacement des liens */
+}
+
+.navbar-nav li.nav-item a.nav-link:hover {
+    transform: scale(1.2); /* Agrandit l'élément de 20% au survol */
+    border-color: rgb(145, 68, 116); /* Bordure couleur or au survol */
+    background-color: rgb(127, 62, 104); /* Arrière-plan couleur or au survol */
+}
+
+
+.container-1{
+    height: 200px;
+    width: 80%;
+    margin: 200px auto;
+}
+
+.container-2{
+    height: 400px;
+    width: 80%;
+    /* margin: 200px auto; */
+}
+
+
+.glass{
+    background: linear-gradient(135deg, rgba(249, 249, 249, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.home_search_container {
+    /* position: absolute; */
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 12px;
+}
+/* body{
+    background: rgb(174, 167, 178);
+} */
+
+
+.title{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 40rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.card{
+    width: 100%;
+    max-width: 600px;
+    padding: 5rem 2.5rem;
+
+    border-radius: 1rem;
+    border: 1px solid transparent;
+
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+
+
+}
+
+.cb1{
+    background-color: rgba(225, 225, 225, 0.1);
+}
+
+
+
+
+.m-2 {
+    margin: -8.5rem!important;
+    z-index: 1;
+}
+
+.card-number{
+    color: rgba(225, 225, 225);
+    font-size: 3rem;
+    z-index: -1;
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+}
+
+section{
+z-index: -1;
+}
+
+
+footer{
+    background: rgb(7,12,15);
+background: linear-gradient(123deg, rgb(82, 36, 82) 0%, rgba(159,172,195,1) 90%, rgba(232,242,252,1) 100%);
+}
