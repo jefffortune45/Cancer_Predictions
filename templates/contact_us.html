@@ -1,11 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-</head>
-<body>
-    
+{% extends 'base.html' %}
+
+
+{% block content %}
+<body class="gradient">
+
+
+  <header class="pt-3 gradient">
+    <div class="container home-content">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5">    
+                <div class="inner-content text-white-50">
+                    <h2 class="display-6">Contact Us</h2>
+                    <p class="fs-5 text-white">
+                        Welcome to our contact page dedicated to the fight against cancer. If you have any questions, 
+                        worries or are looking for support, please don't hesitate to contact us. Our dedicated team is 
+                        here to support you every step of the way.
+                        <br><br>
+                        Thank you for choosing our organization for your support in the fight against cancer. 
+                        Together, we form a community committed to providing the support needed to face this ordeal.
+
+                    </p>
+                    <a href="{{ url_for('contact_us') }}#contact" class="pt-md-3">
+                        <button type="button" class="btn btn-outline-warning fs-4">Message</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="inner-content">
+                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carrousel -->
+                        <div class="carousel-inner text-md-center pt-lg-5">
+                            <a href="{{ url_for('breast_cancer')}}">
+                                <div class="carousel-item active">
+                                    <div class="card text-bg-dark">
+                                        <img src="static\Cancers\dentist.jpg" class="card-img" alt="Image">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title display-2"></h5>
+                                            <p class="card-text text-warning display-2 pt-5">Contact Us Now</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="{{ url_for('heart_attact')}}">
+                                <div class="carousel-item active">
+                                    <div class="card text-bg-dark">
+                                        <img src="static\Cancers\heart2.jpg" class="card-img" alt="Image">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title display-2 my-md-3 text-warning">Heart Attack</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="{{ url_for('skin_cancer')}}">
+                                <div class="carousel-item active">
+                                    <div class="card text-bg-dark">
+                                        <img src="static\Cancers\skin_cancer.jpg" class="card-img" alt="Image">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title my-md-5 fs-1 text-light">Skin Cancer<br><span class="text-white py-5 display-1">Prediction</span></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+
+                            
+                        </div>
+                    
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">PrÃ©cÃ©dent</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Suivant</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill="#fff" fill-opacity="1" d="M0,32L1440,96L1440,320L0,320Z"></path>
+      <text x="40%" y="120" font-family="Arial" font-size="46" fill="#bb900f">Contactez-nous</text>
+    </svg>
+  </header>
+
+    <main id="contact" class="py-5 bg-image text-warning">
+        <!-- <img src="static\Cancers\doctor.jpg" class="bg-img-1" alt=""> -->
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h4>Adresse</h4>
+                  <p class="text-white fs-5">#12 Laforza Delmas 75, Port-au-Prince, HaÃ¯ti</p>
+                  <h4>Telephone</h4>
+                  <p class="text-white fs-5">+509 4689 4905</p>
+                  <h4>Email</h4>
+                  <p class="text-white fs-5 fst-normal">cancerprediction@gmail.com</p>
+              </div>
+              <div class="col-md-6">
+                  <form>
+                      <div class="mb-3">
+                          <label for="nom" class="form-label">Nom</label>
+                          <input type="text" class="form-control" id="nom" placeholder="Votre Nom">
+                      </div>
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="Votre Email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Message</label>
+                          <textarea class="form-control" id="message" rows="8" placeholder="Votre Message"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-warning">Send Message</button>                     
+                  </form>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <footer>
+
+        <div class="text-center">
+            <ul class="list-inline d-flex justify-content-center">
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fas fa-envelope-open-text border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-twitter border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-instagram border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-telegram border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fas fa-phone border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid text-center">
+            <a href="contact.html" class="text-decoration-none text-light mb-3">Administration</a><br>
+        </div>
+    </footer>
+
+
 </body>
-</html>
+{% endblock %}

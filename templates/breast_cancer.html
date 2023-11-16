@@ -14,67 +14,191 @@
             </header>
         </div>
 
-        <section class="container my-2 bg-dark w-50 text-light p-2">
-            <form class="row g-3 p-3">
-                <div class="col-md-4">
-                    <label for="validationDefault01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationDefault02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationDefaultUsername" class="form-label">Username</label>
-                    <div class="input-group">
-                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+        <section class="container my-2 bg-dark w-90 text-light p-2">
+            <form class="" method="post" action='/breast_cancer'>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="inputID" class="form-label">Concavity_se</label>
+                        <input type="text" class="form-control" id="inputId" value="" name="concavity_se" required  placeholder="2.302">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputradius_mean" class="form-label">Radius mean</label>
+                        <input type="text" class="form-control" id="inputradius_mean" value="" name="radius_mean" required required placeholder="ex.10.38">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputtexture_mean" class="form-label">Texture mean</label>
+                        <input type="text" class="form-control" id="inputtexture_mean" value="" name="texture_mean" required required placeholder="122.8">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputperimeter_mean" class="form-label">Perimeter mean</label>
+                        <input type="text" class="form-control" id="inputperimeter_mean" value="" name="perimeter_mean" required required placeholder="1001">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                <!-- row 2 -->
+                <div class="row">
+                    <div class="col-3">
+                        <label for="inputarea_mean" class="form-label">Area mean</label>
+                        <input type="text" class="form-control" id="inputarea_mean" value="" name="area_mean" required placeholder="0.1184">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputsmoothness_mean" class="form-label">Smoothness mean</label>
+                        <input type="text" class="form-control" id="inputsmoothness_mean" value="" name="smoothness_mean" required required placeholder="0.2776">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputcompactness_mean" class="form-label">Compactness mean</label>
+                        <input type="text" class="form-control" id="inputcompactness_mean" value="" name="compactness_mean" required required placeholder="0.3001">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputconcavity_mean" class="form-label">Concavity mean </label>
+                        <input type="text" class="form-control" id="inputconcavity_mean" value="" name="concavity_mean" required required placeholder="0.1471">
+                    </div>
+                </div> 
+            <!-- row3 -->
+            <div class="row">
+                <div class="col-3">
+                    <label for="inputconcave_points_mean" class="form-label">Concave points mean</label>
+                    <input type="text" class="form-control" id="inputconcave_points_mean" value="" name="concave_points_mean" required required placeholder="0.2419">
                 </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+
+                <div class="col-3">
+                    <label for="inputradius_mean" class="form-label">Symmetry mean</label>
+                    <input type="text" class="form-control" id="inputradius_mean" value="" name="symmetry_mean" required required placeholder="0.07871">
                 </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+
+                <div class="col-3">
+                    <label for="inputtexture_mean" class="form-label">Fractal dimension mean</label>
+                    <input type="text" class="form-control" id="inputtexture_mean" value="" name="fractal_dimension_mean" required  placeholder="1.095">
                 </div>
-                <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+
+                <div class="col-3">
+                    <label for="inputperimeter_mean" class="form-label">Radius se</label>
+                    <input type="text" class="form-control" id="inputperimeter_mean" value="" name="radius_se" required  placeholder="0.9053">
                 </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+            </div>
+                  <!-- row 4 -->
+                  <div class="row">
+                    <div class="col-3">
+                        <label for="inputarea_mean" class="form-label">Texture se</label>
+                        <input type="text" class="form-control" id="inputarea_mean" value="" name="texture_se" required required placeholder="8.589">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputsmoothness_mean" class="form-label">Perimeter se </label>
+                        <input type="text" class="form-control" id="inputsmoothness_mean" value="" name="perimeter_se" required required placeholder="153.4">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputcompactness_mean" class="form-label">Area se</label>
+                        <input type="text" class="form-control" id="inputcompactness_mean" value="" name="area_se" required required placeholder="0.006399">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="inputconcavity_mean" class="form-label">Smoothness se </label>
+                        <input type="text" class="form-control" id="inputconcavity_mean" value="" name="smoothness_se" required required placeholder="0.04904">
+                    </div>
+                </div> 
+            <!-- row5 -->
+            <div class="row">
+                <div class="col-3">
+                    <label for="inputconcave_points_mean" class="form-label">Compactness se</label>
+                    <input type="text" class="form-control" id="inputconcave_points_mean" value="" name="compactness_se" required required placeholder="0.05373" >
                 </div>
-                <div class="col-md-4">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+
+                <div class="col-3">
+                    <label for="inputradius_mean" class="form-label">Concave points se</label>
+                    <input type="text" class="form-control" id="inputradius_mean" value="" name="concave_points_se" required required placeholder="0.01587">
                 </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+
+                <div class="col-3">
+                    <label for="inputtexture_mean" class="form-label"> Symmetry se </label>
+                    <input type="text" class="form-control" id="inputtexture_mean" value="" name="symmetry_se" required required placeholder="0.03003">
                 </div>
-                <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                    Check me out
-                    </label>
+
+                <div class="col-3">
+                    <label for="inputperimeter_mean" class="form-label">Fractal dimension se</label>
+                    <input type="text" class="form-control" id="inputperimeter_mean" value="" name="fractal_dimension_se" required required placeholder="0.006193">
                 </div>
+                   <!-- row 6 -->
+            <div class="row">
+                <div class="col-3">
+                    <label for="inputconcave_points_mean" class="form-label">Radius worst</label>
+                    <input type="text" class="form-control" id="inputconcave_points_mean" value="" name="radius_worst" required required placeholder="25.38">
                 </div>
-                    <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+
+                <div class="col-3">
+                    <label for="inputradius_mean" class="form-label">Texture worst</label>
+                    <input type="text" class="form-control" id="inputradius_mean" value="" name="texture_worst" required required placeholder="17.33">
                 </div>
+
+                <div class="col-3">
+                    <label for="inputtexture_mean" class="form-label">Perimeter worst</label>
+                    <input type="text" class="form-control" id="inputtexture_mean" value="" name="perimeter_worst" required required placeholder="184.6">
+                </div>
+
+                <div class="col-3">
+                    <label for="inputperimeter_mean" class="form-label">Area worst</label>
+                    <input type="text" class="form-control" id="inputperimeter_mean" value="" name="area_worst" required required placeholder="2019">
+                </div>
+            </div>
+               <!-- row 7 -->
+               <div class="row">
+                <div class="col-3">
+                    <label for="inputconcave_points_mean" class="form-label">Smoothness worst</label>
+                    <input type="text" class="form-control" id="inputconcave_points_mean" value="" name="smoothness_worst" required required placeholder="0.1622">
+                </div>
+
+                <div class="col-3">
+                    <label for="inputradius_mean" class="form-label">Compactness worst</label>
+                    <input type="text" class="form-control" id="inputradius_mean" value="" name="compactness_worst" required required placeholder="0.6656">
+                </div>
+
+                <div class="col-3">
+                    <label for="inputtexture_mean" class="form-label">Concavity worst</label>
+                    <input type="text" class="form-control" id="inputtexture_mean" value="" name="concavity_worst" required required placeholder="0.7119">
+                </div>
+
+                <div class="col-3">
+                    <label for="inputperimeter_mean" class="form-label">Concave points worst</label>
+                    <input type="text" class="form-control" id="inputperimeter_mean" value="" name="concave_points_worst" required  placeholder="0.2654">
+                </div>
+            </div>
+             <!-- row 8 -->
+             <div class="row">
+                <div class="col-6">
+                    <label for="inputconcave_points_mean" class="form-label">Symmetry worst</label>
+                    <input type="text" class="form-control" id="inputconcave_points_mean" value="" name="symmetry_worst" required  placeholder="0.4601">
+                </div>
+
+                <div class="col-6">
+                    <label for="inputradius_mean" class="form-label">Fractal dimension worst</label>
+                    <input type="text" class="form-control" id="inputradius_mean" value="" name="fractal_dimension_worst" required required placeholder="0.1189">
+                </div>
+
+                
+            </div>
+                <div class="col-12 pt-3 text-center pt-5">
+                    <button type="submit" class="btn btn-outline-warning btn-lg" >SUBMIT</button>
+                </div>
+
+                <!-- <div class="col-md-4">
+                    <label for="inputprediction" class="form-label">PREDICTIONS</label>
+                    <input type="text" class="form-control" id="inputprediction" name="predictionbc" value="{{ predictionbc }}" >
+                </div> -->
             </form>
         </section>
+        <section class="container mt-5">
+            <div class="border p-4 rounded-5 bg-opacity-50 bg-light-subtle">
+                <h1 class="text-center display-3">PREDICTION RESULT</h1>
+                <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ prediction }}</h1>
+            </div>
+        </section>
+
     </main>
 
 

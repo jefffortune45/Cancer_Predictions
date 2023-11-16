@@ -14,53 +14,50 @@
         </div>
 
         <section class="container my-2 bg-dark w-50 text-light p-2">
-            <form class="row g-3 p-3">
+            <form class="row g-3 p-3" method="post" action='/heart_attact'>
                 <div class="col-md-4">
-                    <label for="validationDefault01" class="form-label">Age</label>
-                    <input type="number" class="form-control" id="validationDefault01" value="Mark" required>
+                    <label for="inputAge" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="inputAge" value="" name="Age" required>
                 </div>
                 <div class="col-md-4">
                     <label for="validationDefault02" class="form-label">Gender</label> <!-- a refaire (List Boxes)-->
-                    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                    <select class="form-select" id="exampleSelect1"  name="Gender">
+                        <option>F</option>
+                        <option>M</option>
+                                           </select>
                 </div>
+              
+
                 <div class="col-md-4">
-                    <label for="validationDefaultUsername" class="form-label">Username</label>
-                    <div class="input-group">
-                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
-                    </div>
+                    <label for="validationDefaultUsername" class="form-label">Impulse</label>
+                   
+                    <input type="text" class="form-control" id="validationDefaultImpulse" name="Impulse">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="inputpressure_high" class="form-label">pressure_high</label>
+                    <input type="text" class="form-control" id="inputpressure_high" name="pressure_high">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="inputpressure_low" class="form-label">pressure_low</label>
+                 <input type="text" class="form-control" id="inputpressure_low" name="pressure_low" placeholder="">
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <label for="inputglucose" class="form-label">glucose</label>
+                    <input type="text" class="form-control" id="inputglucose" name="glucose" placeholder="">
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <label for="inputkcm" class="form-label">kcm</label>
+                    <input type="text" class="form-control" id="inputkcm" name="kcm" placeholder="">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="inputtroponin" class="form-label">troponin</label>
+                    <input type="text" class="form-control" id="inputtroponin" name="troponin">
                 </div>
                 <div class="col-md-4">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                    <label for="inputprediction" class="form-label">PREDICTIONS</label>
+                    <input type="text" class="form-control" id="inputprediction" name="prediction" value="{{ prediction }}" >
                 </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
+               
                 <div class="col-12">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -69,10 +66,16 @@
                     </label>
                 </div>
                 </div>
-                    <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-outline-warning btn-lg">SUBMIT</button>
                 </div>
             </form>
+        </section>
+        <section class="container mt-5">
+            <div class="border p-4 rounded-5 bg-opacity-50 bg-light-subtle">
+                <h1 class="text-center display-3">PREDICTION RESULT</h1>
+                <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ prediction }}</h1>
+            </div>
         </section>
     </main>
 
