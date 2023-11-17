@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
 
 <body>
     <main>
-        <img class="bg-img" src="static/Cancers/doctor.jpg" alt="images">
+        <img class="bg-img" src="static\Cancers\heart_cancer.jpg" alt="images">
 
-        <div class="container-fluid text-light py-3">
+        <div class="container-fluid text-light py-3 pt-5 pb-5">
             <header class="text-center">
                 <h1 class="display-6">Welcome to our <br> <span class="display-4">Heart Attack Prediction</span></h1>
             </header>
@@ -24,7 +22,7 @@
                     <select class="form-select" id="exampleSelect1"  name="Gender">
                         <option>F</option>
                         <option>M</option>
-                                           </select>
+                    </select>
                 </div>
               
 
@@ -45,7 +43,7 @@
                     <label for="inputglucose" class="form-label">glucose</label>
                     <input type="text" class="form-control" id="inputglucose" name="glucose" placeholder="">
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <label for="inputkcm" class="form-label">kcm</label>
                     <input type="text" class="form-control" id="inputkcm" name="kcm" placeholder="">
                 </div>
@@ -53,31 +51,140 @@
                     <label for="inputtroponin" class="form-label">troponin</label>
                     <input type="text" class="form-control" id="inputtroponin" name="troponin">
                 </div>
-                <div class="col-md-4">
-                    <label for="inputprediction" class="form-label">PREDICTIONS</label>
-                    <input type="text" class="form-control" id="inputprediction" name="prediction" value="{{ prediction }}" >
-                </div>
-               
                 <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                    Check me out
-                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        Check me out
+                        </label>
+                    </div>
                 </div>
-                </div>
-                    <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-outline-warning btn-lg">SUBMIT</button>
+                <div class="row justify-content-center pt-4">
+                    <div class="col-6 text-center">
+                        <button type="submit" class="btn btn-outline-warning btn-lg">SUBMIT</button>
+                    </div>
                 </div>
             </form>
         </section>
-        <section class="container mt-5">
-            <div class="border p-4 rounded-5 bg-opacity-50 bg-light-subtle">
-                <h1 class="text-center display-3">PREDICTION RESULT</h1>
-                <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ prediction }}</h1>
-            </div>
-        </section>
     </main>
+
+    <section class="container mt-5">
+        <div class="border p-4 rounded-5 bg-opacity-50 bg-light-subtle prediction">
+            <h1 class="text-center display-3">PREDICTION RESULT</h1>
+            <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ prediction }}</h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pb-5">
+            <div class="row">
+                <h1 class="pt-5 pb-5 text-center display-4">Advice for Heart Attack patients</h1>
+
+                <div class="col-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GJzcaceXZJQ?si=d0vKeioMgd2OO4Hh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <div class="container row pt-5">
+                        <a href="https://www.medicoverhospitals.in/fr/diseases/heart-attack/" class="text-decoration-none">
+                            <div class="card" style="width: 35rem;">
+                                <img src="static\Cancers\heart-3.jpg" class="card-img-top" alt="ruban">
+                                <div class="card-body">
+                                    <h5 class="card-text">Symptoms and Causes</h5>
+                                    <h6>
+                                        Common signs of breast cancer and what to look for.
+                                        What are Heart Attack symptoms?
+                                    </h6>
+                                    <h5>see more articles...</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="col-6">
+                    <ol class="list-group list-group">
+                        <li class="list-group-item">
+                            <h5>1. Follow medical instructions</h5>
+                            <p>
+                                Strictly adhere to your doctor's recommendations regarding medication, diet, 
+                                exercise and follow-up visits. Take your medication regularly and as prescribed.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>2. Adopt a healthy lifestyle</h5>
+                            <p>
+                                Eat a balanced diet and reduce your intake of salt, saturated fats and sugar. 
+                                Exercise regularly, but in accordance with your doctor's recommendations.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>3. Control risk factors</h5>
+                            <p>
+                                Monitor your blood pressure, cholesterol and blood sugar levels. Avoid smoking and limit alcohol consumption.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>4. Manage stress</h5>
+                            <p>
+                                Find relaxation techniques such as meditation, deep breathing or yoga to manage stress. Stress can have a negative impact on your heart.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>5. Watch for warning signs</h5>
+                            <p>
+                                Be aware of the signs and symptoms of another heart attack. If you experience chest pain, 
+                                shortness of breath, dizziness or other unusual symptoms, contact a healthcare professional immediately.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>6. Participate in cardiac rehabilitation programs</h5>
+                            <p>
+                                These programs can help you resume progressive physical activity under medical supervision, and provide you with information about adopting a healthy lifestyle.
+                            </p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5>7. It is impotant to:</h5>
+                            <p>
+                                Maintaining open communication with your doctor and carefully following his or her advice are crucial to improving your heart health and reducing the risk of further complications.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="text-center">
+            <ul class="list-inline d-flex justify-content-center">
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fas fa-envelope-open-text border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-twitter border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-instagram border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fab fa-telegram border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+                <li class="list-inline-item mt-3">
+                    <a href="#"><i class="fas fa-phone border border-white rounded-circle p-2 text-white"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid text-center">
+            <a href="contact.html" class="text-decoration-none text-light mb-3">Administration</a><br>
+        </div>
+    </footer>
 
 </body>
 

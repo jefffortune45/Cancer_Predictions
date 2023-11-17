@@ -2,35 +2,40 @@
 
 
 {% block content %}
-<body>
-    <header class="mb-0">
-        <img class="bg-img" src="static/Cancers/breast-cancer-6701684_1280.jpg" alt="images">
 
-        <div class="text-white glass container-1  pb-5">
-            <h1 class="display-1 text-center">Keeping Cancer at bay</h1>
-        
-            <div class="container row text-white">
-                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
-                    <h1>
-                        Understanding
-                    </h1>
-                </div>
-                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
-                    <h1>
-                        Prevention
-                    </h1>
-                </div>
-                <div class="col-4 display-5 d-flex justify-content-center"> <!-- Ajoutez d-flex justify-content-center ici -->
-                    <h1>
-                        Take action
-                    </h1>
-                </div>
+<body>
+  <header class="mb-0">
+    <img class="bg-img img-fluid" src="static/Cancers/breast-cancer-6701684_1280.jpg" alt="images">
+
+    <div class="text-white glass p-4 p-md-5">
+        <h1 class="display-1 text-center">Keeping Cancer at Bay</h1>
+
+        <div class="container">
+          <div class="container row text-white align-items-center justify-content-center">
+            <div class="col-md-4 col-12 display-5 d-flex justify-content-center mb-md-0 mb-3">
+                <h1 class="text-center">
+                  Understanding
+                </h1>
+            </div>
+            <div class="col-md-4 col-12 display-5 d-flex justify-content-center mb-md-0 mb-3">
+                <h1 class="text-center">
+                  Prevention
+                </h1>
+            </div>
+            <div class="col-md-4 col-12 display-5 d-flex justify-content-center">
+                <h1 class="text-center">
+                  Take action
+                </h1>
             </div>
         </div>
-    </header>
+        </div>
+    </div>
+</header>
+
+  
 
 
-    <section>
+    <section class="pt-5">
         <div class="container mb-0 pb-0 align-items-center justify-content-center">
             <div class="container row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
@@ -120,7 +125,7 @@
         <h1 class="display-4 text-center text-black-50 pb-3 pt-3">
             Take Precautions <span class="text-success">to Prevent Cancer</span>
         </h1>
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
             <div class="col-7">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
@@ -193,7 +198,7 @@
 
 
 
-    <section class="fast-booking pb-0">
+    <section class="fast-booking">
         <div class="container my-5">
             <h2 class="text-center pt-5 pb-5 text-warning-emphasis display-3">Avis des Clients</h2>
             <div class="row">
@@ -202,7 +207,10 @@
                         <img src="static\Cancers\dentist.jpg" alt="Client 1" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Jean Dupont</h5>
-                            <p class="card-text">Service rapide et fiable. J'ai toujours eu d'excellentes expÃ©riences avec ce service de taxi.</p>
+                            <p class="card-text">This site is an incredible resource for understanding and fighting cancer. The information is 
+                              clear, well organized and easily accessible. I have found useful tips to prevent the disease and inspiring 
+                              testimonials. Thank you for this great platform!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -211,7 +219,11 @@
                         <img src="static\Cancers\yes.jpg" alt="Client 2" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Marie Martin</h5>
-                            <p class="card-text">Les chauffeurs sont trÃ¨s courtois. Je recommande vivement ce service A tous ceux qui recherchent un taxi de confiance.</p>
+                            <p class="card-text">
+                              A comprehensive and reassuring site for people affected by cancer. The sections on treatments, healthy lifestyles and 
+                              support programs are a great help. The layout is user-friendly and suitable for everyone. It's an excellent guide to 
+                              getting through this difficult time.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -220,7 +232,9 @@
                         <img src="static\Cancers\portrait.jpg" alt="Client 3" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Pierre Lambert</h5>
-                            <p class="card-text">Excellent rapport qualite-prix. J'ai utilise ce service plusieurs fois et je suis toujours satisfait.</p>
+                            <p class="card-text">This site has provided me with a wealth of valuable information for helping a loved one with cancer. 
+                              The resources available, including nutritional advice and suggestions for patient support, have been invaluable to me. 
+                              I highly recommend this site for its informative and comforting content.</p>
                         </div>
                     </div>
                 </div>
@@ -261,5 +275,3 @@
 
 
 {% endblock %}
-
-

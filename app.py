@@ -5,7 +5,8 @@ import numpy as np
 import joblib
 from sklearn.preprocessing import StandardScaler
 
-import joblib
+
+
 
 app = Flask(__name__)
 
@@ -101,8 +102,7 @@ def breast_cancer():
      concavity_worst ,concave_points_worst ,symmetry_worst,fractal_dimension_worst) 
      
 
-     d0 = (17.99,10.38,122.8,1001,0.1184,0.2776,0.3001,0.1471,0.2419,0.07871,1.095,0.9053,8.589,153.4,0.006399,0.04904,0.05373,0.01587,0.03003,0.006193,25.38,17.33,184.6,2019,0.1622,0.6656,0.7119,0.2654,0.4601,0.1189)
-     user_input = [14.2, 20.5, 94.7, 684.2, 0.103, 0.183, 0.256, 0.132, 0.167, 0.055, 0.362, 1.408, 2.007, 28.06, 0.006, 0.059, 0.095, 0.024, 0.03, 0.006, 16.3, 28.39, 108.1, 830.9, 0.138, 0.273, 0.434, 0.157, 0.207, 0.060]
+     
      
      d_arr = np.array(tab)
      res_arr = d_arr.reshape(1, -1)
@@ -115,7 +115,7 @@ def breast_cancer():
      else:
         pred='Benign Tumor'
 
-     print("dataset yo",tab)
+     
     
      
           
@@ -124,6 +124,7 @@ def breast_cancer():
 
 @app.route('/heart_attact', methods=['POST','GET'])
 def heart_attact():
+    
      age = request.form.get('Age')
      gender = request.form.get('Gender')
      impulse = request.form.get('Impulse')
