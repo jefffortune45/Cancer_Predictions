@@ -13,45 +13,47 @@
 
         <section class="container my-2 bg-dark w-50 text-light p-2">
             <form class="row g-3 p-3" method="post" action='/diabetes'>
-                <div class="col-md-4">
-                    <label for="inputAge" class="form-label">Age</label>
-                    <input type="text" class="form-control" id="inputAge" value="" name="ages" required>
-                </div>
+                
 
                 <div class="col-md-4">
                     <label for="validationDefault02" class="form-label">Pregnancies</label>
                    
-                    <input type="text" class="form-control" id="validationDefaultImpulse" name="Pregnancies">
+                    <input type="text" class="form-control" id="validationDefaultImpulse" name="Pregnancies" placeholder="Entier"  >
+                  
                 </div>
               
 
                 <div class="col-md-4">
                     <label for="validationDefaultUsername" class="form-label">Glucose</label>
                    
-                    <input type="text" class="form-control" id="validationDefaultImpulse" name="glucoses">
+                    <input type="text" class="form-control" id="validationDefaultImpulse" name="glucoses"  placeholder="Entier" required>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label for="inputpressure_high" class="form-label">Blood Pressure</label>
-                    <input type="text" class="form-control" id="inputpressure_high" name="blood_pressure">
+                    <input type="text" class="form-control" id="inputpressure_high" name="blood_pressure"  placeholder="Entier" required>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label for="inputpressure_low" class="form-label">Skin Thickness</label>
-                 <input type="text" class="form-control" id="inputpressure_low" name="skin_Thickness" placeholder="">
+                 <input type="text" class="form-control" id="inputpressure_low" name="skin_Thickness"  placeholder="Entier" required>
                 </div>
 
-                <div class="col-12">
+                <div class="col-md-4">
                     <label for="inputglucose" class="form-label">Insulin</label>
-                    <input type="text" class="form-control" id="inputglucose" name="insulin" placeholder="">
+                    <input type="text" class="form-control" id="inputglucose" name="insulin"  placeholder="Entier" required>
                 </div>
-                <div class="col-6">
+                <div class="col-md-4">
                     <label for="inputkcm" class="form-label">BMI</label>
-                    <input type="text" class="form-control" id="inputkcm" name="bmi" placeholder="">
+                    <input type="text" class="form-control" id="inputkcm" name="bmi" placeholder="float" required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputtroponin" class="form-label">Diabetes Pedigree Function</label>
-                    <input type="text" class="form-control" id="inputtroponin" name="diabetes_Pedigree_Function">
+                    <input type="text" class="form-control" id="inputtroponin" name="diabetes_Pedigree_Function" placeholder="float" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAge" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="inputAge" value="" name="ages" required  placeholder="Entier">
                 </div>
                 <div class="col-12">
                     <div class="form-check">
@@ -73,7 +75,7 @@
     <section class="container mt-5">
         <div class="border p-4 rounded-5 bg-opacity-50 bg-light-subtle">
             <h1 class="text-center display-3">PREDICTION RESULT</h1>
-            <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ prediction }}</h1>
+            <h1 class="display-4 text-lg-center text-uppercase text-warning">{{ predictiondc }}</h1>
         </div>
     </section>
 

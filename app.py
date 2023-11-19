@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask import Flask, request, render_template
-from matplotlib import scale
+
 import numpy as np
 import joblib
 from sklearn.preprocessing import StandardScaler
@@ -108,12 +108,15 @@ def breast_cancer():
      res_arr = d_arr.reshape(1, -1)
 
      loaded_modelbc = joblib.load('breastcancer_model')
-
-     pred = loaded_modelbc.predict(res_arr)
-     if pred == [0]:
-        pred='Malignant Tumor'
+     if sum(tab)==0.0:
+         pred = " "
      else:
-        pred='Benign Tumor'
+         pred = loaded_modelbc.predict(res_arr)
+         if pred == [0]:
+            pred='Malignant Tumor'
+         else:
+            pred='Benign Tumor'
+     
 
      
     
@@ -164,8 +167,12 @@ def heart_attact():
      
      
      loaded_model = joblib.load('model_Heart')
-     prediction = loaded_model.predict(dataset)
-     
+    # prediction = loaded_model.predict(dataset)
+     if sum(datas)==0.0:
+         prediction = " "
+     else:
+         prediction = loaded_model.predict(dataset)
+            
     
      return render_template('heart_attact.html',prediction=prediction[0])
 
@@ -177,6 +184,7 @@ def skin_cancer():
 
 @app.route('/diabetes',methods=['POST','GET'])
 def diabetes():
+     
      ages = request.form.get('ages')
      Pregnancies = request.form.get('Pregnancies')
      glucoses = request.form.get('glucoses')
@@ -187,32 +195,48 @@ def diabetes():
      diabetes_Pedigree_Function = request.form.get('diabetes_Pedigree_Function')
 
       # Vérifier et traiter les valeurs None
-     ages = int(ages) if ages is not None else 0
-     Pregnancies = float(Pregnancies) if Pregnancies is not None else 0.0
-     glucoses = float(glucoses) if glucoses is not None else 0.0
-     blood_pressure = float(blood_pressure) if blood_pressure is not None else 0.0
-     skin_Thickness = float(skin_Thickness) if skin_Thickness is not None else 0.0
-     insulin = float(insulin) if insulin is not None else 0.0
+     try:
+    # Tentative de conversion en entier
+        Pregnancies = int(Pregnancies) if Pregnancies is not None  else 0
+        ages = int(ages) if ages is not None else 0
+        Pregnancies = int(Pregnancies) if Pregnancies is not None and float(Pregnancies).is_integer() else 0
+       
+        glucoses = int(glucoses) if glucoses is not None and float(Pregnancies).is_integer() else 0
+        blood_pressure = int(blood_pressure) if blood_pressure is not None and float(Pregnancies).is_integer() else 0
+        skin_Thickness = int(skin_Thickness) if skin_Thickness is not None and float(Pregnancies).is_integer() else 0
+        insulin = int(insulin) if insulin is not None and float(Pregnancies).is_integer() else 0
+     except ValueError:
+    # Générer une exception si la conversion échoue
+         raise ValueError("Pregnancies, Age,glucoses,blood_pressure, skin_Thickness, insulin   doit être un nombre entier.")
+    
      bmi = float(bmi) if bmi is not None else 0
      diabetes_Pedigree_Function = float(diabetes_Pedigree_Function) if diabetes_Pedigree_Function is not None else 0.0
      
-     tab1= (Pregnancies,glucoses, blood_pressure, skin_Thickness, insulin,bmi, diabetes_Pedigree_Function,ages)
-     tab_arr = np.array(tab1)
-     tab_res = tab_arr.reshape(1, -1)
-    #  scaler = StandardScaler()
-    #  std_data = scaler.transform(tab_res)
-     print('le tableau reshape',ages)
-     print('le tableau reshape',tab_arr)
-     print('le tableau reshape',tab_res)
-
-     loaded_modelbc = joblib.load('ken_diabetes_model')
-
-     pred1 = loaded_modelbc.predict(tab_res)
-     if pred1[0] == [0]:
-        pred1='NEGATIF'
+     tab2= [Pregnancies,glucoses, blood_pressure, skin_Thickness, insulin, bmi, diabetes_Pedigree_Function,ages]
+   
+     loaded_modeldiab = joblib.load('diabetes_model1')
+            
+              
+     new_data = np.array([tab2])
+     data_res= new_data.reshape(1,-1)
+     if sum(tab2) == 0.0:
+         pred1 = " "
      else:
-        pred1='POSITIF'
-     return render_template('diabetes.html',prediction=pred1)
+          pred1 = loaded_modeldiab.predict(data_res)
+          
+        # Output de la prédiction
+          if pred1[0] == 0:
+             print("Not diabetic (0)")
+             pred1 = 'NEGATIF'
+          else:
+             pred1 = 'POSITIF'
+             print("Diabetic (1)")
+         
+              
+
+     
+     
+     return render_template('diabetes.html',predictiondc=pred1)
 
 
 
